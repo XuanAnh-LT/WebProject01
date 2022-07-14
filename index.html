@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_margin">
+            <div id="logo">
+                <img src="./Header/logo.png" alt="Logo">
+            </div>
+
+            <div id="slogan">
+                <img src="./Header/slogan.png" alt="Slogan">
+            </div>
+
+            <div id="phone">
+                <img src="./Header/phone.png" alt="Phone">
+            </div>
+        </div>
+    </div>
+    
+    <div id="slider_menu">
+        <div id="menu">
+            <ul>
+                <li><a href="" title=""> </a></li>
+                <li><a href="" title="">TRANG CHỦ</a></li>
+                <li><a href="" title="">HƯỚNG DẪN TTHC</a></li>
+                <li><a href="" title="">TRA CỨU HỒ SƠ</a></li>
+                <li><a href="" title="">DỊCH VỤ CÔNG</a></li>
+                <li><a href="" title="">ĐÁNH GIÁ CÁN BỘ</a></li>
+                <li><a href="" title="">HỎI ĐÁP</a></li>
+            </ul>
+        </div>
+
+        <div id="menu1">
+            <ul>
+                <li id="menu1_firstchild">TIN MỚI</li>
+                <li>Kế hoạch sản xuất vụ Đông các tỉnh phía Bắc</li>
+                <li>-</li>
+                <li>Tăng cường các biện pháp phòng, chống bệnh cúm gia cầm</li>
+                <li>-</li>
+                <li>Đề xuất quy hoạch bảo vệ</li>
+            </ul>
+        </div>
+    </div>
+
+   <div id="calendar">
+            <button class="button-display-left" onclick="plusDivs(-1)">&#10094;</button>
+
+            <img class="mySlides" src="./Body1/Thang1.png" alt="Thang1" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang2.png" alt="Thang2" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang3.png" alt="Thang3" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang1.png" alt="Thang1" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang2.png" alt="Thang2" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang3.png" alt="Thang3" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang1.png" alt="Thang1" style="width: 30%">
+            <img class="mySlides" src="./Body1/Thang2.png" alt="Thang2" style="width: 30%">
+            
+            <button class="button-display-right" onclick="plusDivs(1)">&#10095;</button>
+   </div>
+
+   <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+    //   if (n > x.length) {slideIndex = n-x.length}
+    //   if (n < 1) {slideIndex = x.length}
+    if (n > x.length-2){n=x.length-2;return}
+    if (n < 1){n=1;return}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "inline";  
+      x[slideIndex].style.display = "inline"; 
+      x[slideIndex+1].style.display = "inline";  
+    }
+    </script>
+
+   <div id="profile">
+        <div id="first_profile" class="profile_child">
+            <div id="first_profile_label">
+                <h4 id="first_profile_label_h4">MỘT CỨU TÌNH TRẠNG HỒ SƠ</h4>
+            </div>
+            <div id="first_profile_content">
+                <p>Để tra cứu tình trạng hồ sơ cấp phép, xin vui lòng nhập mã số tra cứu trên giấy biên nhận.</p>
+                <div id="first_profile_content_align">
+                    <div id="first_profile_content_search">
+                        <input id="search_bar" type="text"></input>
+                    </div>
+                    <div>
+                        <input id="search_button" type="submit" value="TRA CỨU"></input>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="second_profile" class="profile_child">
+            <div id="second_profile_label">
+                <h4 id="second_profile_label_h4" class="second_profile_label_child">HỒ SƠ ĐÃ CÓ KẾT QUẢ</h4>
+                <p id="second_profile_label_detail" class="second_profile_label_child"> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; >> Chi tiết</p>
+            </div>
+            <div id="second_profile_content">
+                <div id="second_profile_content_profileid" class="second_profile_content_child">
+                    <p id="second_profile_content_profileid_label">Mã hồ sơ</p>
+                    <p>1575747094121</p>
+                    <p>1575751085850</p>
+                    <p>1575758031736</p>
+                </div>
+                <div id="second_profile_content_name" class="second_profile_content_child">
+                    <p id="second_profile_content_name_label">Họ tên</p>
+                    <p>Công ty CP xăng dầu khí Thái Bình</p>
+                    <p>Phạm Hải Thanh</p>
+                    <p>Nguyễn Văn Quyền</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="third_profile" class="profile_child">
+                <img id="third_profile_img1" src="./Body2/guihoso.png" alt="Gửi hồ sơ">
+                <img id="third_profile_img2" src="./Body2/dangky.png" alt="Đăng ký">
+        </div>
+   </div>
+
+   <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+   <div id="menus">
+    <div id="menus_column1" class="menus_child">
+        <div id="menus_column1_1"><img src="./Body3/Column1_1.png" alt="Lịch công tác"></div>
+        <div id="menus_column1_2"><img src="./Body3/column1_2.png" alt="Thông tin báo cáo"></div>
+        <div id="menus_column1_3"><img src="./Body3/Column1_3.png" alt="Thư viện ảnh đẹp"></div>
+    </div>
+    <div id="menus_column2" class="menus_child">
+        <div id="menus_column2_1"><img src="./Body3/Column2_1.png" alt="Bản đồ hành chính"></div>
+        <div id="menus_column2_2"><img src="./Body3/Column2_2.png" alt="Dịch vụ cổng trực tuyến"></div>
+        <div id="menus_column2_3"><img src="./Body3/Column2_3.png" alt="Văn bản quy phạm pháp luật"></div>
+    </div>
+    <div id="menus_column3" class="menus_child">
+        <img src="./Body3/Column3.png" alt="Tổng số hồ sơ">
+    </div>
+    <div id="menus_column4" class="menus_child">
+        <img src="./Body3/Column4.png" alt="Một cửa điện tử">
+    </div>
+   </div>
+
+   <style>
+    table{
+        width: 1170px;
+        margin-top: 32px;
+    }
+    table, th, td{
+        border: 0.5px solid #333;
+        border-collapse: collapse;
+        height: 62px;
+        text-align: center;
+    }
+
+    #table #row2head .col1 {
+        width: 150px;
+        height: 132px;
+    }
+
+    #row1head{
+        height: 40px;
+    }
+
+    .col11{
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .rowend{
+        background: #c6251d ;
+    }
+    #table #row1head .rfhead{
+        background: #007c3b;
+        color: #ffffff
+    }
+    #table #row2head .col2{
+        background: #348ddd;
+        color: #e4f0fa;
+    }
+    #table #row2head .col3{
+        background: #2077c6;
+        color: #e4f0fa;
+    }
+    #table #row2head .col4{
+        background: #0960ae;
+        color: #e4f0fa;
+    }
+    #table #row2head .col5{
+        background: #9e9e9e;
+        color: #ececec;
+    }
+    #table #row2head .col6{
+        background: #898585;
+        color: #e4f0fa;
+
+    }#table #row2head .col7{
+        background: #7a7676;
+        color: #e4f0fa;
+    }
+    #table #row2head .col8{
+        background: #ffd201;
+    }
+
+    .rowend{
+        color: #f7e2e1;
+    }
+</style>
+<div id="table">
+    <table >
+        <thead>
+            <tr id="row1head">
+                <th class="rfhead" colspan="18">BẢNG TỔNG HỢP GIẢI QUYẾT THỦ TỤC HÀNH CHÍNH THÁNG 03/2016</th>
+            </tr>
+            <tr id="row2head" >
+                <th class="col1" rowspan="2" >TÊN ĐƠN VỊ</th>
+                <th class="col2" colspan="2">TIẾP NHẬN</th>
+                <th class="col3" colspan="3">ĐANG GIẢI QUYẾT</th>
+                <th class="col4" colspan="4">ĐÃ GIẢI QUYẾT</th>
+                <th class="col5" colspan="2">TẠM DỪNG</th>
+                <th class="col6" colspan="2">HỦY HỒ SƠ</th>
+                <th class="col7" colspan="3">CHỜ KẾT QUẢ</th>
+                <th class="col8" colspan="1">TỶ LỆ <br> GIẢI QUYẾT</th>
+            </tr>
+            <tr id="row3head">
+                <th>KỲ<br>TRƯỚC</th>
+                <th>TIẾP<br>NHẬN</th>
+                <th>TỔNG<br>SỐ</th>
+                <th>CHƯA<br>ĐẾN <br>HẠN</th>
+                <th>QUÁ<br>HẠN</th>
+                <th>TỔNG<br>SỐ</th>
+                <th>SỚM<br>HẠN</th>
+                <th>HỒ SƠ<br>QUÁ<br>HẠN</th>
+                <th>QUÁ<br>HẠN</th>
+                <th>BỔ<br>SUNG<br>HỒ SƠ</th>
+                <th>THỰC<br>HIỆN<br>NVTC</th>
+                <th>TỪ<br>CHỐI</th>
+                <th>CÔNG<br>DÂN<br>RÚT</th>
+                <th>TỔNG<br>SỐ</th>
+                <th>TRONG<br>KỲ</th>
+                <th>KỲ<br>TRƯỚC</th>
+                <th></th>     
+            </tr>
+        </thead>
+        <tbody>
+            <td class="col11">1.SỞ NỘI VỤ</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>---</td>
+
+
+            <tr>
+                <td class="col11">2.SỞ XÂY DỰNG</td>
+                <td>47</td>
+                <td>147</td>
+                <td>35</td>
+                <td>35</td>
+                <td>0</td>
+                <td>157</td>
+                <td>157</td>
+                <td>0</td>
+                <td>157</td>
+                <td>47</td>
+                <td>35</td>
+                <td>47</td>
+                <td>35</td>
+                <td>47</td>
+                <td>147</td>
+                <td>157</td>
+                <td>100%</td>
+            </tr>
+
+            <tr>
+                <td class="col11">3.UBND TP BẮC GIANG</td>
+                <td>44</td>
+                <td>5</td>
+                <td>47</td>
+                <td>0</td>
+                <td>47</td>
+                <td>2</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>44</td>
+                <td>47</td>
+                <td>44</td>
+                <td>0</td>
+                <td>44</td>
+                <td>5</td>
+                <td>2</td>
+                <td>100%</td>
+            </tr>
+
+            <tr>
+                <td class="col11">4. UBND HUYỆN HIỆP HÒA</td>
+                <td>234</td>
+                <td>1.311</td>
+                <td>239</td>
+                <td>3</td>
+                <td>236</td>
+                <td>1.306</td>
+                <td>1.301</td>
+                <td>5</td>
+                <td>1.306</td>
+                <td>234</td>
+                <td>239</td>
+                <td>234</td>
+                <td>3</td>
+                <td>234</td>
+                <td>1.311</td>
+                <td>1.306</td>
+                <td>100%</td>
+            </tr>
+
+
+            <tr>
+                <td class="col11">5. UBND HUYỆN YÊN THẾ</td>
+                <td>185</td>
+                <td>666</td>
+                <td>162</td>
+                <td>159</td>
+                <td>3</td>
+                <td>560</td>
+                <td>411</td>
+                <td>51</td>
+                <td>560</td>
+                <td>185</td>
+                <td>162</td>
+                <td>185</td>
+                <td>159</td>
+                <td>185</td>
+                <td>666</td>
+                <td>560</td>
+                <td>82,5%</td>
+            </tr>
+
+            <tr>
+                <td class="col11">6.UBND HUYỆN LỤC NAM</td>
+                <td>144</td>
+                <td>1.233</td>
+                <td>251</td>
+                <td>250</td>
+                <td>1</td>
+                <td>1.070</td>
+                <td>927</td>
+                <td>136</td>
+                <td>1.070</td>
+                <td>144</td>
+                <td>251</td>
+                <td>144</td>
+                <td>250</td>
+                <td>144</td>
+                <td>1.233</td>
+                <td>1.070</td>
+                <td>99.346%</td>
+            </tr>
+
+            <tr>
+                <td class="col11">7. UBND HUYỆN YÊN DŨNG</td>
+                <td>0</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+                <td>6</td>
+                <td>0</td>
+                <td>---</td>
+            </tr>
+
+            <tr class="rowend">
+                <td class="col11" >TỔNG SỐ( 7 ĐƠN VỊ )</td>
+                <td>654</td>
+                <td>3.370</td>
+                <td>740</td>
+                <td>453</td>
+                <td>287</td>
+                <td>3.095</td>
+                <td>2.798</td>
+                <td>192</td>
+                <td>3.095</td>
+                <td>73</td>
+                <td>740</td>
+                <td>5.776</td>
+                <td>453</td>
+                <td>654</td>
+                <td>3.370</td>
+                <td>3.095</td>
+                <td>99.61%</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+<div id="schematic">
+    <div id="schematic_1st" class="schematic_child">
+        <div id="schematic_1st_label">
+            <h4>TÌNH HÌNH GIẢI QUYẾT HỒ SƠ 6 THÁNG GẦN ĐÂY</h4>
+        </div>
+        <div id="schematic_1st_content">
+            <img src="./Body4/Column1.png" alt="Tình trạng giải quyết hồ sơ">
+        </div>
+    </div>
+    <div id="schematic_2nd" class="schematic_child">
+        <div id="schematic_2nd_label">
+            <h4>BIỂU ĐỒ KẾT QUẢ XỬ LÝ HỒ SƠ TOÀN TỈNH</h4>
+        </div>
+        <div id="shematic_2nd_content">
+            <img src="./Body4/Column2.png" alt="Biểu đồ kết quả">
+        </div>
+    </div>
+</div>
+
+<div id="footer1">
+    <div id="footer1_1stcolumn" class="footer1_child">
+        <h4>TRUNG TÂM HÀNH CHÍNH CÔNG TỈNH HÒA BÌNH</h4>
+        <div id="footer1_1stcolumn_1stline">
+                <img src="./Footer1/building.png" alt="Icon"></img>
+                <p>Đường Hữu Nghị  -  Thành Phố Hòa Bình  -  Tỉnh Hòa Bình</p>
+        </div>
+        <div id="footer1_1stcolumn_2ndline">
+                <img src="./Footer1/phone.png" alt="Icon"></img>
+                <p>(024) 3555 996</p>
+        </div>
+        <div id="footer1_1stcolumn_3rdline">
+                <img src="./Footer1/phone.png" alt="Icon"></img>
+                <p>(024) 3555 995</p>
+        </div>
+    </div>
+
+    <div id="footer1_2ndcolumn" class="footer1_child">
+        <h4>LIÊN KẾT NHANH</h4>
+        <div id="footer1_2ndcolumn_content">
+            <div id="footer1_2ndcolumn_1stline">
+                <p>></p>
+                <a class="footer1_2ndcolumn_linecontent" class="link_grey" href="" title="">Trang chủ</a>
+            </div>
+            <div id="footer1_2ndcolumn_2ndline">
+                <p>></p>
+                <p class="footer1_2ndcolumn_linecontent">Hướng dẫn TTHC</p>
+            </div>
+            <div id="footer1_2ndcolumn_3rdline">
+                <p>></p>
+                <p class="footer1_2ndcolumn_linecontent">Tra cứu tổng hợp</p>
+            </div>
+            <div id="footer1_2ndcolumn_4thline">
+                <p>></p>
+                <p class="footer1_2ndcolumn_linecontent">Dịch vụ công trực tuyến</p>
+            </div>
+           
+        </div>
+    </div>
+    <div id="footer1_3rdcolumn" class="footer1_child">
+        <h4>BẢN ĐỒ</h4>
+        <img id="footer1_3rdcolumn_map" src="./Footer1/map.png" alt="Bản đồ">
+    </div>
+</div>
+
+<div id="footer2">
+    <div id="footer2_margin">
+    <h5>©CỔNG GIAO TIẾP ĐIỆN TỬ HÒA BÌNH</h5>
+    <h5>Giấy phép Số: 70/GP-TTĐT do Cục Quản lý Phát thanh, Truyền hình và Thông tin điện tử -</h5>
+    <h5>Bộ Thông tin và Truyền thông cấp ngày 26/06/2009.</h5>
+    <h5>Địa chỉ: số 86, Phường Hữu Nghị, TP. Hòa Bình  Điện thoại: (04)351231123/ 35121395 - Fax (04)35121395</h5>
+    <h5>Email: hcc@hoabinh.gov.vn. - Website: conghanhchinh.hoabin.gov.vn</h5>
+    </div>
+</div>
+
+    
+</body>
+</html>
